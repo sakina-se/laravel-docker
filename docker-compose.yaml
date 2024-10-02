@@ -25,7 +25,7 @@ services:
     image: mysql:8  # Use MySQL image
     restart: always
     environment:
-      MYSQL_DATABASE: laravel  # Create a database named 'laravel'
+      MYSQL_DATABASE: ${DB_DATABASE}  # Create a database named 'laravel'
       MYSQL_ROOT_PASSWORD: root  # Set the root password for MySQL
     volumes:
       - mysql_data:/var/lib/mysql  # Persist MySQL data
